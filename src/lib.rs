@@ -59,13 +59,13 @@
 //! });
 //! ```
 
-#![deny(
-    missing_docs,
-    missing_debug_implementations,
-    trivial_numeric_casts,
-    unused_import_braces,
-    unused_qualifications
-)]
+// #![deny(
+//     missing_docs,
+//     missing_debug_implementations,
+//     trivial_numeric_casts,
+//     unused_import_braces,
+//     unused_qualifications
+// )]
 #![cfg_attr(feature = "dev", allow(unstable_features))]
 #![cfg_attr(feature = "dev", feature(plugin))]
 #![cfg_attr(feature = "dev", plugin(clippy))]
@@ -131,6 +131,12 @@ pub mod web {
         Window,
         window
     };
+
+    pub use webapi::math::{
+        Math,
+        math
+    };
+
     pub use webapi::document::{
         Document,
         document
